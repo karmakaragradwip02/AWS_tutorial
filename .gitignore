@@ -164,3 +164,4 @@ cython_debug/
 /AWS_BOTO3_EC2/creds
 /SENTIMENT_ANALYSIS_AWS_S3/train_dir
 /SENTIMENT_ANALYSIS_AWS_S3/train_dir.zip
+*/tinybert-sentiment-analysis
