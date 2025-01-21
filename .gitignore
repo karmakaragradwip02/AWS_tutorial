@@ -165,3 +165,5 @@ cython_debug/
 /SENTIMENT_ANALYSIS_AWS_S3/train_dir
 /SENTIMENT_ANALYSIS_AWS_S3/train_dir.zip
 */tinybert-sentiment-analysis
+*/outputs/tinybert-disaster-tweet
+*/outputs/train_dir
