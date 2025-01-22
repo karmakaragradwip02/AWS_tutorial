@@ -167,3 +167,5 @@ cython_debug/
 */tinybert-sentiment-analysis
 */outputs/tinybert-disaster-tweet
 */outputs/train_dir
+*/train_dir
+*/vit-human-pose-classification
