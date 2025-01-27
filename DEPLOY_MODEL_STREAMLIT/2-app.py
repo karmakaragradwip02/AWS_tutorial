@@ -1,5 +1,7 @@
 import os
 import time
+import torch
+from transformers import pipeline
 import streamlit as st
 import boto3
 
@@ -26,7 +28,18 @@ def download_folder(local_path, s3_prefix, bucket_name):
 
 st.title("Machine Learning Model Deployment At The Server !!!")
 button = st.button("Download Model")
+
 if button:
     with st.spinner("Downloading........... Please Wait"):
         download_folder(local_path, s3_pefix, bucket_name)
         st.text("Model Downloading finished 😊😊😊")
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+classifier = pipeline('text-classification', model=local_path, device=device)
+
+data = st.text_area("Enter Your Review", "Type Here")
+if st.button("Predict"):
+    with st.spinner("Predicting........... Please Wait"):
+        time.sleep(2)
+        result = classifier(data)[0]
+        st.write(f"Sentiment: {result['label']}, with score: {result['score']}")
