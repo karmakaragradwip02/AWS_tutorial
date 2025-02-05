@@ -169,4 +169,5 @@ cython_debug/
 */outputs/train_dir
 */train_dir
 */vit-human-pose-classification
-*/DEPLOY_MODEL_STREAMLIT/downloads/
+DEPLOY_MODEL_STREAMLIT/
+DEPLOY_MODEL_STREAMLIT/images/
